@@ -1,3 +1,31 @@
+// ── HERO VIDEO ──
+const heroVideo = document.querySelector('.hero-video-wrap video');
+if (heroVideo) {
+  heroVideo.playbackRate = 0.75;
+  const FADE = 1.8;
+  let looping = false;
+
+  heroVideo.addEventListener('timeupdate', () => {
+    if (looping || !heroVideo.duration) return;
+    const remaining = heroVideo.duration - heroVideo.currentTime;
+    if (remaining < FADE) {
+      heroVideo.style.opacity = Math.max(0, remaining / FADE);
+    }
+  });
+
+  heroVideo.addEventListener('ended', () => {
+    looping = true;
+    heroVideo.currentTime = 0;
+    heroVideo.play();
+    heroVideo.style.transition = `opacity ${FADE}s linear`;
+    heroVideo.style.opacity = '1';
+    setTimeout(() => {
+      heroVideo.style.transition = '';
+      looping = false;
+    }, FADE * 1000);
+  });
+}
+
 // ── NAV ──
 const nav = document.querySelector('nav');
 if (nav) {
