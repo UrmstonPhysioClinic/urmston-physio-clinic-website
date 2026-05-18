@@ -1,0 +1,71 @@
+[[redirects]]
+  from = "/services"
+  to = "/pages/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/team"
+  to = "/pages/team.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/pricing"
+  to = "/pages/pricing.html"
+  status = 200
+
+[[redirects]]
+  from = "/faqs"
+  to = "/pages/faqs.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/back-pain"
+  to = "/pages/conditions/back-pain.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/neck-pain"
+  to = "/pages/conditions/neck-pain.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/sciatica"
+  to = "/pages/conditions/sciatica.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/knee-pain"
+  to = "/pages/conditions/knee-pain.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/shoulder-pain"
+  to = "/pages/conditions/shoulder-pain.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/hip-pain"
+  to = "/pages/conditions/hip-pain.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/foot-ankle-achilles"
+  to = "/pages/conditions/foot-ankle-achilles.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

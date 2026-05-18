@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Urmston Physio Clinic</title>
+  <meta name="description" content="Contact Urmston Physio Clinic — 220 Higher Road, Urmston, Manchester, M41 9BH. Call 0161 748 4100 or book online." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/logo.png" type="image/png" />
+  <style>
+    .contact-page { padding: 6rem 0; }
+    .contact-page-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; }
+    .contact-block h2 { margin-bottom: 0.5rem; }
+    .contact-block > p { color: var(--grey-mid); margin-bottom: 2.5rem; }
+    .contact-detail-list { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-detail h4 { font-family: var(--font); font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--purple); margin-bottom: 0.4rem; }
+    .contact-detail p, .contact-detail a { color: var(--text); font-size: 1rem; line-height: 1.6; display: block; transition: color var(--transition); }
+    .contact-detail a:hover { color: var(--purple); }
+    .map-block { border-radius: 4px; overflow: hidden; height: 340px; border: 1px solid var(--grey-light); margin-top: 2.5rem; }
+    .map-block iframe { width: 100%; height: 100%; border: none; display: block; }
+    .form-wrap { background: var(--off-white); border: 1px solid var(--grey-light); border-radius: 4px; padding: 2.5rem; }
+    .form-wrap h3 { margin-bottom: 0.4rem; }
+    .form-wrap > p { color: var(--grey-mid); font-size: 0.88rem; margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; font-size: 0.73rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-mid); margin-bottom: 0.4rem; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 0.75rem 1rem;
+      border: 1px solid var(--grey-light); border-radius: var(--radius);
+      font-family: var(--font); font-size: 0.9rem; color: var(--text);
+      background: var(--white); outline: none;
+      transition: border-color var(--transition);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--purple); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit { width: 100%; padding: 0.9rem; background: var(--purple); color: var(--white); border: none; border-radius: var(--radius); font-family: var(--font); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; transition: background var(--transition); margin-top: 0.25rem; }
+    .form-submit:hover { background: var(--purple-dark); }
+    .form-note { font-size: 0.73rem; color: var(--grey-mid); text-align: center; margin-top: 0.75rem; }
+    .form-success { display: none; background: var(--purple-pale); border: 1px solid rgba(153,77,230,0.2); border-radius: 4px; padding: 1rem 1.25rem; text-align: center; font-size: 0.88rem; color: var(--purple); font-weight: 500; margin-top: 1rem; }
+    @media (max-width: 900px) {
+      .contact-page-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../images/logo.png" alt="Urmston Physio Clinic" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="../pages/services.html">Services</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false">Conditions</button>
+        <div class="nav-dropdown-menu">
+          <a href="conditions/back-pain.html">Back Pain</a>
+          <a href="conditions/neck-pain.html">Neck Pain</a>
+          <a href="conditions/sciatica.html">Sciatica</a>
+          <a href="conditions/knee-pain.html">Knee Pain</a>
+          <a href="conditions/shoulder-pain.html">Shoulder Pain</a>
+          <a href="conditions/hip-pain.html">Hip Pain</a>
+          <a href="conditions/foot-ankle-achilles.html">Foot, Ankle &amp; Achilles</a>
+        </div>
+      </li>
+      <li><a href="../pages/team.html">Our Team</a></li>
+      <li><a href="../pages/pricing.html">Pricing</a></li>
+      <li><a href="../pages/faqs.html">FAQs</a></li>
+      <li><a href="../pages/contact.html">Contact</a></li>
+      <li><a href="https://eu.halaxy.com/book/urmston-physio-clinic/location/313854" target="_blank" rel="noopener" class="nav-cta">Book Now</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="../pages/services.html">Services</a>
+    <a href="conditions/back-pain.html">Back Pain</a>
+    <a href="conditions/neck-pain.html">Neck Pain</a>
+    <a href="conditions/sciatica.html">Sciatica</a>
+    <a href="conditions/knee-pain.html">Knee Pain</a>
+    <a href="conditions/shoulder-pain.html">Shoulder Pain</a>
+    <a href="conditions/hip-pain.html">Hip Pain</a>
+    <a href="conditions/foot-ankle-achilles.html">Foot, Ankle &amp; Achilles</a>
+    <a href="../pages/team.html">Our Team</a>
+    <a href="../pages/pricing.html">Pricing</a>
+    <a href="../pages/faqs.html">FAQs</a>
+    <a href="../pages/contact.html">Contact</a>
+    <a href="https://eu.halaxy.com/book/urmston-physio-clinic/location/313854" target="_blank" rel="noopener" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+
+<section class="contact-page">
+  <div class="container">
+    <div class="contact-page-grid">
+
+      <div class="contact-block reveal">
+        <h2>Find Us</h2>
+        <p>We are based in Urmston, Manchester with easy access from across the local area.</p>
+        <div class="contact-detail-list">
+          <div class="contact-detail">
+            <h4>Address</h4>
+            <p>220 Higher Road<br>Urmston, Manchester<br>M41 9BH</p>
+          </div>
+          <div class="contact-detail">
+            <h4>Phone</h4>
+            <a href="tel:01617484100">0161 748 4100</a>
+          </div>
+          <div class="contact-detail">
+            <h4>Email</h4>
+            <a href="mailto:admin@urmstonphysioclinic.com">admin@urmstonphysioclinic.com</a>
+          </div>
+          <div class="contact-detail">
+            <h4>Book Online</h4>
+            <p style="font-size:0.86rem;color:var(--grey-mid);margin-bottom:0.75rem;">Same-week appointments usually available. Book 24/7 via our online system.</p>
+            <a href="https://eu.halaxy.com/book/urmston-physio-clinic/location/313854" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.82rem;">Book an Appointment</a>
+          </div>
+        </div>
+        <div class="map-block">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.5!2d-2.3590!3d53.4415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bad6c61c7f601%3A0x1!2s220+Higher+Rd%2C+Urmston%2C+Manchester+M41+9BH!5e0!3m2!1sen!2suk!4v1"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Urmston Physio Clinic location">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="form-wrap reveal reveal-delay-1">
+        <h3>Send an Enquiry</h3>
+        <p>Have a question before booking? Fill in the form and we will get back to you as soon as possible — usually within one working day.</p>
+        <form id="enquiry-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="07700 000000" />
+          </div>
+          <div class="form-group">
+            <label for="condition">Area of concern</label>
+            <select id="condition" name="condition">
+              <option value="">Please select...</option>
+              <option>Back or neck pain</option>
+              <option>Sports injury</option>
+              <option>Shoulder or upper limb</option>
+              <option>Hip, knee or lower limb</option>
+              <option>Post-operative rehabilitation</option>
+              <option>Movement or biomechanics assessment</option>
+              <option>Insurance query</option>
+              <option>Other / Not sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a little about your condition or question..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Enquiry</button>
+          <p class="form-note">For urgent appointments, please call us directly on 0161 748 4100.</p>
+          <div class="form-success" id="form-success">Your message has been sent — we will be in touch shortly.</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/logo.png" alt="Urmston Physio Clinic" class="footer-logo-img" />
+        <p>Expert musculoskeletal physiotherapy in Urmston, Manchester. HCPC registered. CSP member.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">HCPC Registered</span>
+          <span class="footer-badge">CSP Member</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../pages/services.html">All Services</a></li>
+          <li><a href="conditions/back-pain.html">Back Pain</a></li>
+          <li><a href="conditions/neck-pain.html">Neck Pain</a></li>
+          <li><a href="conditions/sciatica.html">Sciatica</a></li>
+          <li><a href="conditions/knee-pain.html">Knee Pain</a></li>
+          <li><a href="conditions/shoulder-pain.html">Shoulder Pain</a></li>
+          <li><a href="conditions/hip-pain.html">Hip Pain</a></li>
+          <li><a href="conditions/foot-ankle-achilles.html">Foot, Ankle &amp; Achilles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Clinic</h4>
+        <ul>
+          <li><a href="../pages/team.html">Our Team</a></li>
+          <li><a href="../pages/about.html">About Us</a></li>
+          <li><a href="../pages/pricing.html">Pricing</a></li>
+          <li><a href="../pages/faqs.html">FAQs</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="https://eu.halaxy.com/book/urmston-physio-clinic/location/313854" target="_blank" rel="noopener">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <address>
+          <p>220 Higher Road<br>Urmston, Manchester<br>M41 9BH</p>
+          <p><a href="tel:01617484100">0161 748 4100</a></p>
+          <p><a href="mailto:admin@urmstonphysioclinic.com">admin@urmstonphysioclinic.com</a></p>
+        </address>
+        <a href="https://eu.halaxy.com/book/urmston-physio-clinic/location/313854" target="_blank" rel="noopener" class="btn-primary" style="margin-top:1.25rem; font-size:0.8rem; padding:0.65rem 1.25rem;">Book an Appointment</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Urmston Physio Clinic. All rights reserved. 220 Higher Road, Urmston, Manchester, M41 9BH.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(() => {
+    this.reset();
+    document.getElementById('form-success').style.display = 'block';
+    btn.textContent = 'Send Enquiry';
+    btn.disabled = false;
+  }, 900);
+});
+</script>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-label="Cookie notice">
+  <p class="cookie-text">
+    We use cookies to provide essential site functionality and to embed our location map via Google Maps. By clicking "Accept", you consent to our use of cookies.
+    For more information, please see our <a href="#" onclick="return false;">Privacy Policy</a>.
+  </p>
+  <div class="cookie-actions">
+    <button id="cookie-decline" class="cookie-decline">Decline</button>
+    <button id="cookie-accept" class="cookie-accept">Accept Cookies</button>
+  </div>
+</div>
+</body>
+</html>
