@@ -361,15 +361,15 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 /* ── REVIEWS ── */
 .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
 .review-card {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  background: var(--white); border: 1px solid var(--grey-light);
   border-radius: 4px; padding: 2rem;
-  transition: background var(--ease), border-color var(--ease);
+  transition: background var(--ease), border-color var(--ease), box-shadow var(--ease);
 }
-.review-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(153,77,230,0.3); }
+.review-card:hover { border-color: rgba(153,77,230,0.3); box-shadow: 0 8px 28px rgba(153,77,230,0.08); }
 .review-stars { color: var(--purple); letter-spacing: 0.1em; font-size: 0.78rem; margin-bottom: 1rem; }
-.review-text { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 1.25rem; font-style: italic; }
-.review-author { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.88); }
-.review-condition { font-size: 0.73rem; color: rgba(255,255,255,0.32); margin-top: 0.2rem; }
+.review-text { font-size: 0.9rem; color: var(--grey-mid); line-height: 1.75; margin-bottom: 1.25rem; font-style: italic; }
+.review-author { font-size: 0.8rem; font-weight: 600; color: var(--charcoal); }
+.review-condition { font-size: 0.73rem; color: var(--grey-mid); margin-top: 0.2rem; }
 
 /* ── CLINIC PHOTOS ── */
 .clinic-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.75rem; margin-top: 2.5rem; }
