@@ -116,7 +116,7 @@ nav.nav-light .nav-links > li > a:hover { color: var(--purple); }
 
 .nav-cta {
   background: var(--purple) !important; color: var(--white) !important;
-  padding: 0.7rem 1.6rem; border-radius: var(--radius);
+  padding: 0.7rem 1.6rem !important; border-radius: var(--radius);
   font-size: 0.8rem !important; font-weight: 600 !important;
   transition: background var(--ease), transform var(--ease) !important;
 }
