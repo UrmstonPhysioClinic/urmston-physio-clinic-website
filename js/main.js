@@ -54,6 +54,21 @@ if (hamburger && mobileMenu) {
   }));
 }
 
+// ── MOBILE CONDITIONS SUBMENU ──
+const mobileSubToggle = document.querySelector('.mobile-submenu-toggle');
+const mobileSubItems  = document.querySelector('.mobile-submenu-items');
+if (mobileSubToggle && mobileSubItems) {
+  mobileSubToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = mobileSubItems.classList.toggle('open');
+    mobileSubToggle.setAttribute('aria-expanded', open);
+  });
+  mobileSubItems.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileSubItems.classList.remove('open');
+    mobileSubToggle.setAttribute('aria-expanded', 'false');
+  }));
+}
+
 // ── CONDITIONS DROPDOWN ──
 document.querySelectorAll('.nav-dropdown').forEach(dd => {
   const toggle = dd.querySelector('.nav-dropdown-toggle');

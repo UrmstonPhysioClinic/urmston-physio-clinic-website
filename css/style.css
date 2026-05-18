@@ -169,6 +169,19 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
   display: block;
 }
 .mobile-menu a:last-child { border-bottom: none; }
+.mobile-submenu { border-bottom: 1px solid var(--grey-light); }
+.mobile-submenu-toggle {
+  width: 100%; text-align: left; background: none; border: none;
+  font-size: 0.92rem; color: var(--text); font-weight: 500;
+  padding: 0.75rem 0; display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; font-family: var(--font);
+}
+.mobile-submenu-chevron { font-size: 0.6rem; transition: transform var(--ease); }
+.mobile-submenu-toggle[aria-expanded="true"] .mobile-submenu-chevron { transform: rotate(180deg); }
+.mobile-submenu-items { display: none; flex-direction: column; padding-left: 1rem; padding-bottom: 0.5rem; }
+.mobile-submenu-items.open { display: flex; }
+.mobile-submenu-items a { font-size: 0.85rem; color: var(--grey-mid); border-bottom: 1px solid var(--grey-light); }
+.mobile-submenu-items a:last-child { border-bottom: none; }
 .mobile-menu .nav-cta {
   margin-top: 0.75rem; text-align: center;
   display: block; border-radius: var(--radius);

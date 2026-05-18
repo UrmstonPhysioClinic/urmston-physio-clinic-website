@@ -41,13 +41,18 @@
   </div>
   <div class="mobile-menu" aria-hidden="true">
     <a href="../services/index.html">Services</a>
-    <a href="../conditions/back-pain/index.html">Back Pain</a>
-    <a href="../conditions/neck-pain/index.html">Neck Pain</a>
-    <a href="../conditions/sciatica/index.html">Sciatica</a>
-    <a href="../conditions/knee-pain/index.html">Knee Pain</a>
-    <a href="../conditions/shoulder-pain/index.html">Shoulder Pain</a>
-    <a href="../conditions/hip-pain/index.html">Hip Pain</a>
-    <a href="../conditions/foot-ankle-achilles/index.html">Foot, Ankle &amp; Achilles</a>
+    <div class="mobile-submenu">
+      <button class="mobile-submenu-toggle" aria-expanded="false">Conditions <span class="mobile-submenu-chevron">▾</span></button>
+      <div class="mobile-submenu-items">
+        <a href="../conditions/back-pain/index.html">Back Pain</a>
+        <a href="../conditions/neck-pain/index.html">Neck Pain</a>
+        <a href="../conditions/sciatica/index.html">Sciatica</a>
+        <a href="../conditions/knee-pain/index.html">Knee Pain</a>
+        <a href="../conditions/shoulder-pain/index.html">Shoulder Pain</a>
+        <a href="../conditions/hip-pain/index.html">Hip Pain</a>
+        <a href="../conditions/foot-ankle-achilles/index.html">Foot, Ankle &amp; Achilles</a>
+      </div>
+    </div>
     <a href="../team/index.html">Our Team</a>
     <a href="../about/index.html">About</a>
     <a href="../pricing/index.html">Pricing</a>
@@ -89,22 +94,14 @@
       <div class="form-wrap reveal reveal-d1">
         <h3>Send an Enquiry</h3>
         <p>Have a question before booking? Fill in the form and we will get back to you within one working day.</p>
-        <form id="enquiry-form" novalidate>
+        <form id="enquiry-form" name="contact" method="POST" data-netlify="true" novalidate>
+          <input type="hidden" name="form-name" value="contact" />
           <div class="form-row">
             <div class="form-group"><label for="first-name">First Name</label><input type="text" id="first-name" name="first-name" placeholder="Jane" required /></div>
             <div class="form-group"><label for="last-name">Last Name</label><input type="text" id="last-name" name="last-name" placeholder="Smith" required /></div>
           </div>
           <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@example.com" required /></div>
           <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="07700 000000" /></div>
-          <div class="form-group"><label for="condition">Area of concern</label>
-            <select id="condition" name="condition">
-              <option value="">Please select...</option>
-              <option>Back or neck pain</option><option>Sports injury</option>
-              <option>Shoulder or upper limb</option><option>Hip, knee or lower limb</option>
-              <option>Post-operative rehabilitation</option><option>Movement or biomechanics</option>
-              <option>Insurance query</option><option>Other / Not sure</option>
-            </select>
-          </div>
           <div class="form-group"><label for="message">Your Message</label><textarea id="message" name="message" placeholder="Tell us a little about your condition or question..."></textarea></div>
           <button type="submit" class="form-submit">Send Enquiry</button>
           <p class="form-note">For urgent appointments, call us directly on 0161 748 4100.</p>
@@ -118,9 +115,12 @@
 <script>
 document.getElementById('enquiry-form').addEventListener('submit',function(e){
   e.preventDefault();
-  const btn=this.querySelector('.form-submit');
+  const form=this;
+  const btn=form.querySelector('.form-submit');
   btn.textContent='Sending...';btn.disabled=true;
-  setTimeout(()=>{this.reset();document.getElementById('form-success').style.display='block';btn.textContent='Send Enquiry';btn.disabled=false;},900);
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
+    .then(()=>{form.reset();document.getElementById('form-success').style.display='block';btn.textContent='Send Enquiry';btn.disabled=false;})
+    .catch(()=>{btn.textContent='Send Enquiry';btn.disabled=false;});
 });
 </script>
 
@@ -129,7 +129,7 @@ document.getElementById('enquiry-form').addEventListener('submit',function(e){
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="../images/logo.png" alt="Urmston Physio Clinic" class="footer-logo-img" />
-        <p>Expert musculoskeletal physiotherapy in Urmston, Manchester. HCPC registered. CSP member.</p>
+        <p>Expert musculoskeletal physiotherapy in Urmston, Manchester. HCPC registered. CSP members.</p>
         <div class="footer-badges">
           <span class="footer-badge">HCPC Registered</span>
           <span class="footer-badge">CSP Member</span>
