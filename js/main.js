@@ -26,6 +26,35 @@ if (heroVideo) {
   });
 }
 
+// ── FACILITIES VIDEO ──
+const facilitiesVideo = document.querySelector('.facilities-video-wrap video');
+if (facilitiesVideo) {
+  facilitiesVideo.playbackRate = 0.9;
+  const overlay = facilitiesVideo.nextElementSibling;
+  const FADE = 0.8;
+  let looping = false;
+
+  facilitiesVideo.addEventListener('timeupdate', () => {
+    if (looping || !facilitiesVideo.duration) return;
+    const remaining = facilitiesVideo.duration - facilitiesVideo.currentTime;
+    if (remaining < FADE) {
+      overlay.style.opacity = String(1 - (remaining / FADE));
+    }
+  });
+
+  facilitiesVideo.addEventListener('ended', () => {
+    looping = true;
+    facilitiesVideo.currentTime = 0;
+    facilitiesVideo.play();
+    overlay.style.transition = `opacity ${FADE}s ease`;
+    overlay.style.opacity = '0';
+    setTimeout(() => {
+      overlay.style.transition = '';
+      looping = false;
+    }, FADE * 1000);
+  });
+}
+
 // ── NAV ──
 const nav = document.querySelector('nav');
 if (nav) {
