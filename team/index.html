@@ -7,6 +7,67 @@
   <meta name="description" content="Meet the experienced HCPC-registered physiotherapy team at Urmston Physio Clinic, Urmston, Manchester." />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../images/logo.png" type="image/png" />
+  <style>
+    .team-full { padding: 5rem 0; }
+    .team-member {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 4rem; padding: 4rem 0;
+      border-bottom: 1px solid var(--grey-light);
+      align-items: start;
+    }
+    .team-member:last-child { border-bottom: none; }
+    .member-sidebar { position: sticky; top: 120px; }
+    .member-photo {
+      width: 180px; height: 180px; border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(123,79,166,0.2);
+      margin-bottom: 1.5rem;
+    }
+    .member-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    }
+    .member-photo-initials {
+      background: linear-gradient(135deg, var(--purple-pale), #DDD0EF);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .member-initials {
+      font-family: var(--font-display); font-size: 3rem;
+      font-weight: 700; color: var(--purple);
+    }
+    .member-sidebar h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .member-sidebar .team-role { margin-bottom: 1.25rem; }
+    .member-quals { display: flex; flex-direction: column; gap: 0.5rem; }
+    .qual-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.73rem; font-weight: 500; letter-spacing: 0.06em;
+      padding: 0.3rem 0.75rem; border-radius: 20px;
+      background: var(--purple-pale); color: var(--purple);
+      border: 1px solid rgba(123,79,166,0.15);
+      width: fit-content;
+    }
+    .qual-badge::before { content: '✓'; }
+    .member-content h4 {
+      font-family: var(--font-body); font-size: 0.72rem;
+      text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--purple); font-weight: 600;
+      margin: 2rem 0 0.75rem;
+    }
+    .member-content h4:first-child { margin-top: 0; }
+    .member-content p { color: var(--grey-mid); line-height: 1.8; margin-bottom: 0.75rem; }
+    .interests-card {
+      background: var(--off-white);
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.88rem; color: var(--grey-mid);
+      line-height: 1.7;
+    }
+    @media (max-width: 900px) {
+      .team-member { grid-template-columns: 1fr; gap: 2rem; }
+      .member-sidebar { position: static; display: flex; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
 <nav>
@@ -71,83 +132,111 @@
   </div>
 </div>
 
-<section class="section section-white">
+<section class="team-full">
   <div class="container">
 
-    <div class="two-col reveal" style="padding-bottom:4rem; border-bottom:1px solid var(--grey-light);">
-      <div class="col-img">
-        <img src="../images/carl-healy.jpg" alt="Carl Healy, Clinic Director" style="width:100%;height:460px;object-fit:cover;object-position:center top;border-radius:4px;" loading="lazy" />
-      </div>
-      <div class="col-text">
-        <span class="label">Clinic Director</span>
-        <h2>Carl Healy</h2>
-        <span class="team-role" style="margin-bottom:1.25rem;">MSK Physiotherapist</span>
-        <div class="team-quals" style="margin-bottom:1.5rem;">
-          <span class="qual">HCPC Registered</span>
-          <span class="qual">CSP Member</span>
-          <span class="qual">BSc Physiotherapy, Salford 2015</span>
+    <!-- Carl Healy -->
+    <div class="team-member reveal">
+      <div class="member-sidebar">
+        <div class="member-photo">
+          <img src="../images/carl-healy.jpg" alt="Carl Healy" loading="lazy" />
         </div>
+        <h3>Carl Healy</h3>
+        <div class="team-role">Clinic Director</div>
+        <div class="member-quals">
+          <span class="qual-badge">HCPC Registered</span>
+          <span class="qual-badge">CSP Member</span>
+          <span class="qual-badge">BSc Physiotherapy, Salford 2015</span>
+        </div>
+      </div>
+      <div class="member-content">
+        <h4>Clinical Background</h4>
         <p>Carl is Clinic Director at Urmston Physio Clinic, managing the day-to-day running of the practice alongside his clinical caseload. He graduated from the University of Salford in 2015 and has since developed a strong reputation for thorough, effective musculoskeletal physiotherapy.</p>
-        <p style="margin-top:0.85rem;">His clinical work focuses on musculoskeletal and neuromuscular physiotherapy, with particular interest in shoulder and pelvic dysfunction. He takes a movement-focused, evidence-informed approach, aiming to find the underlying drivers of a problem rather than simply addressing the surface symptoms.</p>
-        <p style="margin-top:0.85rem;">Outside the clinic, Carl is a keen runner and cyclist who regularly hikes in the Lake District. His background also includes white-water kayaking, ballet and extensive martial arts training, all of which inform his understanding of movement and physical performance.</p>
+        <h4>Areas of Expertise</h4>
+        <p>His clinical work focuses on musculoskeletal and neuromuscular physiotherapy, with particular interest in shoulder and pelvic dysfunction. He takes a movement-focused, evidence-informed approach, aiming to find the underlying drivers of a problem rather than simply addressing the surface symptoms.</p>
+        <h4>Clinical Philosophy</h4>
+        <p>Carl's primary aim is always to identify the underlying drivers of dysfunction — not just manage symptoms — and to restore optimal function that lasts. He works collaboratively with patients, ensuring they understand their condition and are active participants in their recovery.</p>
+        <h4>Outside the Clinic</h4>
+        <div class="interests-card">Carl is a keen runner and cyclist who regularly hikes in the Lake District. His background also includes white-water kayaking, ballet and extensive martial arts training, all of which inform his understanding of movement and physical performance.</div>
       </div>
     </div>
 
-    <div class="two-col reveal" style="padding:4rem 0; border-bottom:1px solid var(--grey-light);">
-      <div class="col-text">
-        <span class="label">Senior Physiotherapist</span>
-        <h2>Roxanna Healy</h2>
-        <span class="team-role" style="margin-bottom:1.25rem;">MSK Physiotherapist</span>
-        <div class="team-quals" style="margin-bottom:1.5rem;">
-          <span class="qual">HCPC Registered</span>
-          <span class="qual">CSP Member</span>
-          <span class="qual">Newcastle Polytechnic, 1987</span>
+    <!-- Roxanna Healy -->
+    <div class="team-member reveal">
+      <div class="member-sidebar">
+        <div class="member-photo">
+          <img src="../images/roxana-healy.jpg" alt="Roxanna Healy" loading="lazy" style="object-position: center 65%;" />
         </div>
+        <h3>Roxanna Healy</h3>
+        <div class="team-role">Senior Physiotherapist</div>
+        <div class="member-quals">
+          <span class="qual-badge">HCPC Registered</span>
+          <span class="qual-badge">CSP Member</span>
+          <span class="qual-badge">Newcastle Polytechnic, 1987</span>
+        </div>
+      </div>
+      <div class="member-content">
+        <h4>Clinical Background</h4>
         <p>Roxanna qualified from Newcastle Polytechnic in 1987, giving her nearly four decades of clinical experience. Her career spans two distinct disciplines: she began specialising in paediatric neurological physiotherapy, building deep expertise in complex neurological rehabilitation, before moving into musculoskeletal physiotherapy where she has worked as a clinical specialist for many years.</p>
-        <p style="margin-top:0.85rem;">She brings a holistic, functional approach to rehabilitation, drawing on her neurological background to support patients with diverse and often complex presentations. Her breadth of experience is something few practitioners can match.</p>
-        <p style="margin-top:0.85rem;">At weekends Roxanna enjoys walks along the Formby coast, where she relaxes and watches the local red squirrel population.</p>
-      </div>
-      <div class="col-img">
-        <img src="../images/roxana-healy.jpg" alt="Roxanna Healy" style="width:100%;height:460px;object-fit:cover;object-position:center 65%;border-radius:4px;" loading="lazy" />
-      </div>
-    </div>
-
-    <div class="two-col reveal" style="padding:4rem 0; border-bottom:1px solid var(--grey-light);">
-      <div class="col-img">
-        <img src="../images/diana-satalova.jpg" alt="Diana Satalova" style="width:100%;height:460px;object-fit:cover;object-position:center top;border-radius:4px;" loading="lazy" />
-      </div>
-      <div class="col-text">
-        <span class="label">Physiotherapist</span>
-        <h2>Diana Satalova</h2>
-        <span class="team-role" style="margin-bottom:1.25rem;">Biomechanics &amp; Movement</span>
-        <div class="team-quals" style="margin-bottom:1.5rem;">
-          <span class="qual">HCPC Registered</span>
-          <span class="qual">CSP Member</span>
-          <span class="qual">BSc Physiotherapy, Brighton 2011</span>
-        </div>
-        <p>Since graduating from the University of Brighton in 2011, Diana has built a clinical focus on body movement, biomechanics, neuro-kinetic therapy and breathing therapy. She takes a full-body approach to assessment and treatment, working on the basis that the source of pain is often found somewhere other than where the symptoms are felt.</p>
-        <p style="margin-top:0.85rem;">This perspective has proved particularly effective for patients who have struggled to find answers with other practitioners. Diana is committed to ongoing learning and regularly attends courses and seminars to develop her clinical skills further.</p>
-        <p style="margin-top:0.85rem;">Outside the clinic she studies languages, goes hiking, and attends health education events.</p>
+        <h4>Areas of Expertise</h4>
+        <p>She has developed extensive expertise in complex neurological rehabilitation and combines this with hands-on MSK practice to deliver care that is truly holistic and highly effective. Her breadth of experience is something few practitioners can match.</p>
+        <h4>Clinical Philosophy</h4>
+        <p>Roxanna brings a holistic, functional approach to rehabilitation, drawing on her neurological background to support patients with diverse and often complex presentations.</p>
+        <h4>Outside the Clinic</h4>
+        <div class="interests-card">At weekends Roxanna enjoys walks along the Formby coast, where she relaxes and watches the local red squirrel population amid the sand dunes and pine forest.</div>
       </div>
     </div>
 
-    <div class="two-col reveal" style="padding-top:4rem;">
-      <div class="col-text">
-        <span class="label">Physiotherapist</span>
-        <h2>Steve Sharples</h2>
-        <span class="team-role" style="margin-bottom:1.25rem;">MSK &amp; Orthopaedic Physiotherapist</span>
-        <div class="team-quals" style="margin-bottom:1.5rem;">
-          <span class="qual">HCPC Registered</span>
-          <span class="qual">CSP Member</span>
-          <span class="qual">BSc Sports Science, 1987</span>
-          <span class="qual">BSc Physiotherapy, 1992</span>
+    <!-- Diana Satalova -->
+    <div class="team-member reveal">
+      <div class="member-sidebar">
+        <div class="member-photo">
+          <img src="../images/diana-satalova.jpg" alt="Diana Satalova" loading="lazy" />
         </div>
-        <p>Steve brings over 30 years of clinical experience to Urmston Physio Clinic. He completed a BSc in Sports Science in 1987 before going on to qualify as a physiotherapist in 1992, a dual academic background that gives him a particularly strong grounding in movement science and physical performance alongside his clinical training.</p>
-        <p style="margin-top:0.85rem;">Since qualifying he has worked across NHS and private settings, developing broad and deep expertise in musculoskeletal and orthopaedic physiotherapy. His clinical experience spans A&amp;E, hydrotherapy, rheumatology and shoulder clinics, and he has held senior roles including Extended Scope Practitioner in Musculoskeletal and Rheumatology and Orthopaedic Physiotherapy Specialist.</p>
-        <p style="margin-top:0.85rem;">Steve is known for a measured, thorough approach to assessment and a genuine commitment to good patient outcomes. His personal interests and hobbies will be added here shortly.</p>
+        <h3>Diana Satalova</h3>
+        <div class="team-role">Biomechanics &amp; Movement</div>
+        <div class="member-quals">
+          <span class="qual-badge">HCPC Registered</span>
+          <span class="qual-badge">CSP Member</span>
+          <span class="qual-badge">BSc Physiotherapy, Brighton 2011</span>
+        </div>
       </div>
-      <div class="col-img" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--purple-pale),var(--purple-mid));border-radius:4px;min-height:320px;">
-        <div style="font-size:5rem;font-weight:700;color:var(--purple);">SS</div>
+      <div class="member-content">
+        <h4>Clinical Background</h4>
+        <p>Since graduating from the University of Brighton in 2011, Diana has continuously developed her knowledge and clinical skills — driven by a genuine passion for understanding how the human body moves, compensates, and heals.</p>
+        <h4>Areas of Expertise</h4>
+        <p>Diana has built a clinical focus on body movement, biomechanics, neuro-kinetic therapy and breathing therapy. She takes a full-body approach to assessment and treatment, working on the basis that the source of pain is often found somewhere other than where the symptoms are felt. This perspective has proved particularly effective for patients who have struggled to find answers with other practitioners.</p>
+        <h4>Clinical Philosophy</h4>
+        <p>Diana is committed to ongoing learning and regularly attends courses and seminars to develop her clinical skills further. She finds great satisfaction in seeing the positive impact that a well-targeted, thorough assessment and treatment plan can have on people's lives.</p>
+        <h4>Outside the Clinic</h4>
+        <div class="interests-card">Outside the clinic she studies languages, goes hiking, and attends health education events — a reflection of her genuine love of learning and continuous development.</div>
+      </div>
+    </div>
+
+    <!-- Steve Sharples -->
+    <div class="team-member reveal">
+      <div class="member-sidebar">
+        <div class="member-photo member-photo-initials">
+          <div class="member-initials">SS</div>
+        </div>
+        <h3>Steve Sharples</h3>
+        <div class="team-role">MSK &amp; Orthopaedic Physiotherapist</div>
+        <div class="member-quals">
+          <span class="qual-badge">HCPC Registered</span>
+          <span class="qual-badge">CSP Member</span>
+          <span class="qual-badge">BSc Sports Science, 1987</span>
+          <span class="qual-badge">BSc Physiotherapy, 1992</span>
+        </div>
+      </div>
+      <div class="member-content">
+        <h4>Clinical Background</h4>
+        <p>Steve brings over 30 years of clinical experience to Urmston Physio Clinic. He completed a BSc in Sports Science in 1987 before qualifying as a physiotherapist in 1992 — a dual academic background that gives him a particularly strong grounding in movement science and physical performance alongside his clinical training.</p>
+        <h4>Areas of Expertise</h4>
+        <p>Since qualifying he has worked across NHS and private settings, developing broad and deep expertise in musculoskeletal and orthopaedic physiotherapy. His clinical experience spans A&amp;E, hydrotherapy, rheumatology and shoulder clinics, and he has held senior roles including Extended Scope Practitioner in Musculoskeletal and Rheumatology and Orthopaedic Physiotherapy Specialist.</p>
+        <h4>Clinical Philosophy</h4>
+        <p>Steve is known for a measured, thorough approach to assessment and a genuine commitment to good patient outcomes.</p>
+        <h4>Outside the Clinic</h4>
+        <div class="interests-card">Steve's personal interests and hobbies will be added here shortly.</div>
       </div>
     </div>
 
@@ -157,7 +246,7 @@
 <div class="cta-band">
   <div class="container">
     <h2>Book with Any of Our Team</h2>
-    <p>Choose your preferred physiotherapist when booking online.</p>
+    <p>Pick your preferred physiotherapist, or book with whoever best suits your schedule. Every member of our team is fully qualified to treat a wide range of conditions to the same high standard.</p>
     <div class="btn-actions">
       <a href="https://eu.halaxy.com/book/urmston-physio-clinic/location/313854" target="_blank" rel="noopener" class="btn btn-outline-light">Book Now</a>
       <a href="../contact/index.html" class="btn btn-outline-light">Contact Us</a>
