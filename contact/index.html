@@ -106,21 +106,80 @@
           <button type="submit" class="form-submit">Send Enquiry</button>
           <p class="form-note">For urgent appointments, call us directly on 0161 748 4100.</p>
           <div class="form-success" id="form-success">Your message has been sent. We will be in touch shortly.</div>
+          <div class="form-error" id="form-error">Something went wrong. Please try again or call us on 0161 748 4100.</div>
         </form>
       </div>
     </div>
   </div>
 </section>
-<style>@media(max-width:900px){.contact-page-grid{grid-template-columns:1fr!important;}}</style>
+<style>
+  @media(max-width:900px){.contact-page-grid{grid-template-columns:1fr!important;}}
+  .form-error{display:none;background:#fff0f0;border:1px solid rgba(180,0,0,0.2);border-radius:4px;padding:1rem 1.25rem;text-align:center;font-size:0.88rem;color:#c00;font-weight:500;margin-top:1rem;}
+  .field-error{border-color:#c00!important;}
+  .field-error-msg{font-size:0.72rem;color:#c00;margin-top:0.3rem;display:block;}
+</style>
 <script>
-document.getElementById('enquiry-form').addEventListener('submit',function(e){
+document.getElementById('enquiry-form').addEventListener('submit', function(e) {
   e.preventDefault();
-  const form=this;
-  const btn=form.querySelector('.form-submit');
-  btn.textContent='Sending...';btn.disabled=true;
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
-    .then(()=>{form.reset();document.getElementById('form-success').style.display='block';btn.textContent='Send Enquiry';btn.disabled=false;})
-    .catch(()=>{btn.textContent='Send Enquiry';btn.disabled=false;});
+  const form = this;
+
+  // Clear previous errors
+  form.querySelectorAll('.field-error').forEach(el => el.classList.remove('field-error'));
+  form.querySelectorAll('.field-error-msg').forEach(el => el.remove());
+  document.getElementById('form-error').style.display = 'none';
+
+  // Validate required fields
+  const required = [
+    { id: 'first-name', label: 'First name is required' },
+    { id: 'last-name',  label: 'Last name is required' },
+    { id: 'email',      label: 'Email address is required' },
+    { id: 'message',    label: 'Please enter a message' }
+  ];
+  let valid = true;
+  required.forEach(({ id, label }) => {
+    const field = document.getElementById(id);
+    if (!field.value.trim()) {
+      field.classList.add('field-error');
+      const msg = document.createElement('span');
+      msg.className = 'field-error-msg';
+      msg.textContent = label;
+      field.parentElement.appendChild(msg);
+      valid = false;
+    }
+  });
+
+  // Basic email format check
+  const emailField = document.getElementById('email');
+  if (emailField.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+    emailField.classList.add('field-error');
+    const existing = emailField.parentElement.querySelector('.field-error-msg');
+    if (!existing) {
+      const msg = document.createElement('span');
+      msg.className = 'field-error-msg';
+      msg.textContent = 'Please enter a valid email address';
+      emailField.parentElement.appendChild(msg);
+    }
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  const btn = form.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
+    .then(() => {
+      form.reset();
+      document.getElementById('form-success').style.display = 'block';
+      btn.textContent = 'Send Enquiry';
+      btn.disabled = false;
+    })
+    .catch(() => {
+      document.getElementById('form-error').style.display = 'block';
+      btn.textContent = 'Send Enquiry';
+      btn.disabled = false;
+    });
 });
 </script>
 
