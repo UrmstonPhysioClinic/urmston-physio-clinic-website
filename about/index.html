@@ -100,45 +100,47 @@
       <h2>Our Facilities</h2>
       <div class="divider"></div>
     </div>
-    <div class="facilities-grid reveal">
-      <div class="facilities-video-wrap">
-        <video autoplay muted playsinline poster="../images/hero_full-bleed.png" style="width:100%; display:block;">
-          <source src="../images/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div class="facilities-fade-overlay" style="position:absolute;inset:0;background:#000;opacity:0;transition:opacity 0.7s ease;pointer-events:none;"></div>
+    <div class="facilities-video-wrap reveal">
+      <video autoplay muted playsinline poster="../images/hero_full-bleed.png" style="width:100%; display:block;">
+        <source src="../images/hero-video.mp4" type="video/mp4" />
+      </video>
+      <div class="facilities-fade-overlay" style="position:absolute;inset:0;background:#000;opacity:0;transition:opacity 0.7s ease;pointer-events:none;"></div>
+    </div>
+    <div class="facilities-highlights reveal">
+      <div class="facility-item">
+        <h4>Consultation Rooms</h4>
+        <p>Large, well-equipped rooms designed for comprehensive musculoskeletal assessment and treatment, with space to move and be assessed properly.</p>
       </div>
-      <div class="facilities-highlights">
-        <div class="facility-item">
-          <h4>Consultation Rooms</h4>
-          <p>Large, well-equipped rooms designed for comprehensive musculoskeletal assessment and treatment, with space to move and be assessed properly.</p>
-        </div>
-        <div class="facility-item">
-          <h4>Temperature Control</h4>
-          <p>Each room has individual thermostatic heating and air conditioning, so the temperature is always comfortable whatever the time of year.</p>
-        </div>
-        <div class="facility-item">
-          <h4>Rehabilitation Gym</h4>
-          <p>A dedicated rehab gym with treadmill, exercise bike, weights bench and multigym, giving patients the space and equipment to support their recovery.</p>
-        </div>
-        <div class="facility-item">
-          <h4>Reception &amp; Environment</h4>
-          <p>A comfortable reception area and relaxed, welcoming environment make the clinic a place patients feel at ease from the moment they arrive.</p>
-        </div>
-        <div class="facility-item">
-          <h4>Wheelchair Access</h4>
-          <p>The clinic is wheelchair accessible via a portable ramp. Please call ahead when booking so we can make sure everything is ready for you.</p>
-        </div>
+      <div class="facility-item">
+        <h4>Temperature Control</h4>
+        <p>Each room has individual thermostatic heating and air conditioning, so the temperature is always comfortable whatever the time of year.</p>
+      </div>
+      <div class="facility-item">
+        <h4>Rehabilitation Gym</h4>
+        <p>A dedicated rehab gym with treadmill, exercise bike, weights bench and multigym, giving patients the space and equipment to support their recovery.</p>
+      </div>
+      <div class="facility-item">
+        <h4>Reception &amp; Environment</h4>
+        <p>A comfortable reception area and relaxed, welcoming environment make the clinic a place patients feel at ease from the moment they arrive.</p>
+      </div>
+      <div class="facility-item">
+        <h4>Wheelchair Access</h4>
+        <p>The clinic is wheelchair accessible via a portable ramp. Please call ahead when booking so we can make sure everything is ready for you.</p>
+      </div>
+      <div class="facility-item">
+        <h4>Parking</h4>
+        <p>Free on-site parking is available directly in front of reception. Secure Sheffield stand cycle parking is also available at the front of the building.</p>
       </div>
     </div>
   </div>
 </section>
 <style>
-  .facilities-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; margin-top:2.5rem; }
-  .facilities-video-wrap { border-radius:4px; overflow:hidden; position:relative; }
-  .facilities-highlights { display:flex; flex-direction:column; gap:1.5rem; }
+  .facilities-video-wrap { border-radius:4px; overflow:hidden; position:relative; margin-top:2.5rem; }
+  .facilities-highlights { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem 2.5rem; margin-top:2rem; }
   .facility-item h4 { font-size:0.68rem; font-weight:600; text-transform:uppercase; letter-spacing:0.14em; color:var(--purple); margin-bottom:0.4rem; }
-  .facility-item p { color:var(--grey-mid); font-size:0.9rem; line-height:1.75; margin:0; }
-  @media(max-width:900px){ .facilities-grid { grid-template-columns:1fr; gap:2.5rem; } }
+  .facility-item p { color:var(--grey-mid); font-size:0.88rem; line-height:1.75; margin:0; }
+  @media(max-width:900px){ .facilities-highlights { grid-template-columns:1fr 1fr; } }
+  @media(max-width:600px){ .facilities-highlights { grid-template-columns:1fr; } }
 </style>
 
 <section class="section section-dark">
