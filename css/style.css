@@ -307,7 +307,7 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 .step p { font-size: 0.84rem; color: var(--grey-mid); line-height: 1.75; }
 
 /* ── INSURANCE ── */
-.insurer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-bottom: 2rem; }
+.insurer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 2rem; }
 .insurer-card {
   border: 1px solid var(--grey-light); border-radius: 4px;
   padding: 2rem 1.5rem; display: flex; flex-direction: column;
