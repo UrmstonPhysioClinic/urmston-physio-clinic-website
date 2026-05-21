@@ -26,6 +26,25 @@
     .policy-contact-box p { margin: 0; font-size: 0.9rem; color: var(--grey-mid); line-height: 1.9; }
     .policy-contact-box a { color: var(--purple); }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function initGA() {
+      if (window._gaInitialised) return;
+      window._gaInitialised = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DQG3MYNNQ5';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-DQG3MYNNQ5', {
+        linker: { domains: ['urmstonphysioclinic.com', 'eu.halaxy.com'] }
+      });
+    }
+    if (localStorage.getItem('upc_cookie_consent') === 'accepted') { initGA(); }
+    window.addEventListener('upc:cookie-accepted', initGA);
+  </script>
 </head>
 <body>
 <nav>

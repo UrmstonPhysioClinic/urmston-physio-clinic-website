@@ -68,6 +68,25 @@
       .member-sidebar { position: static; display: flex; flex-direction: column; align-items: flex-start; }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function initGA() {
+      if (window._gaInitialised) return;
+      window._gaInitialised = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DQG3MYNNQ5';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-DQG3MYNNQ5', {
+        linker: { domains: ['urmstonphysioclinic.com', 'eu.halaxy.com'] }
+      });
+    }
+    if (localStorage.getItem('upc_cookie_consent') === 'accepted') { initGA(); }
+    window.addEventListener('upc:cookie-accepted', initGA);
+  </script>
 </head>
 <body>
 <nav>
@@ -177,7 +196,7 @@
       </div>
       <div class="member-content">
         <h4>Clinical Background</h4>
-        <p>Roxanna qualified from Newcastle Polytechnic in 1987, giving her nearly four decades of clinical experience. Her career spans two distinct disciplines: she began specialising in paediatric neurological physiotherapy, building deep expertise in complex neurological rehabilitation, before moving into musculoskeletal physiotherapy where she has worked as a clinical specialist for many years.</p>
+        <p>Roxanna qualified from Newcastle Polytechnic in 1987, giving her nearly four decades of clinical experience. Her career spans two distinct disciplines: she began specialising in paediatric neurological and MSK physiotherapy, building deep expertise in complex neurological rehabilitation, before moving into musculoskeletal physiotherapy where she has worked as a clinical specialist for many years.</p>
         <h4>Areas of Expertise</h4>
         <p>She has developed extensive expertise in complex neurological rehabilitation and combines this with hands-on MSK practice to deliver care that is truly holistic and highly effective. Her breadth of experience is something few practitioners can match.</p>
         <h4>Clinical Philosophy</h4>
@@ -234,9 +253,9 @@
         <h4>Areas of Expertise</h4>
         <p>Since qualifying he has worked across NHS and private settings, developing broad and deep expertise in musculoskeletal and orthopaedic physiotherapy. His clinical experience spans A&amp;E, hydrotherapy, rheumatology and shoulder clinics, and he has held senior roles including Extended Scope Practitioner in Musculoskeletal and Rheumatology and Orthopaedic Physiotherapy Specialist.</p>
         <h4>Clinical Philosophy</h4>
-        <p>Steve is known for a measured, thorough approach to assessment and a genuine commitment to good patient outcomes.</p>
+        <p>Steve is known for a measured, thorough, holistic approach to assessment and a genuine commitment to good patient outcomes.</p>
         <h4>Outside the Clinic</h4>
-        <div class="interests-card">Outside the clinic, Steve is a keen runner with an extensive background in mountaineering and hiking. He also has a long history in martial arts, including Judo.</div>
+        <div class="interests-card">Outside the clinic, Steve is a keen runner with an extensive background in mountaineering and hiking. He also has a long history in martial arts, including Judo and Jujitsu.</div>
       </div>
     </div>
 
