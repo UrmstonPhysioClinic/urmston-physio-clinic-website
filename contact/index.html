@@ -7,25 +7,7 @@
   <meta name="description" content="Contact Urmston Physio Clinic. 220 Higher Road, Urmston, Manchester, M41 9BH. Call 0161 748 4100 or book online." />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../images/logo.png" type="image/png" />
-  <!-- Google tag (gtag.js) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    function initGA() {
-      if (window._gaInitialised) return;
-      window._gaInitialised = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DQG3MYNNQ5';
-      document.head.appendChild(s);
-      gtag('js', new Date());
-      gtag('config', 'G-DQG3MYNNQ5', {
-        linker: { domains: ['urmstonphysioclinic.com', 'eu.halaxy.com'] }
-      });
-    }
-    if (localStorage.getItem('upc_cookie_consent') === 'accepted') { initGA(); }
-    window.addEventListener('upc:cookie-accepted', initGA);
-  </script>
+  <script src="/js/consent.js" defer></script>
 </head>
 <body>
 <nav>
@@ -107,7 +89,8 @@
           </div>
         </div>
         <div class="map-wrap" style="margin-top:2rem; height:280px;">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.5!2d-2.3590!3d53.4415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bad6c61c7f601%3A0x1!2s220+Higher+Rd%2C+Urmston%2C+Manchester+M41+9BH!5e0!3m2!1sen!2suk!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Urmston Physio Clinic location"></iframe>
+          <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.5!2d-2.3590!3d53.4415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bad6c61c7f601%3A0x1!2s220+Higher+Rd%2C+Urmston%2C+Manchester+M41+9BH!5e0!3m2!1sen!2suk!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Urmston Physio Clinic location"></iframe>
+          <div class="map-placeholder"><p>The map is provided by Google Maps, which sets cookies.</p><button type="button" class="map-load-btn">Show map</button></div>
         </div>
       </div>
       <div class="form-wrap reveal reveal-d1">
@@ -188,7 +171,9 @@ document.getElementById('enquiry-form').addEventListener('submit', function(e) {
   btn.disabled = true;
 
   fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
-    .then(() => {
+    .then(res => {
+      if (!res.ok) throw new Error('Form submission failed');
+      if (window.upcTrack) upcTrack('contact_form_submit');
       form.reset();
       document.getElementById('form-success').style.display = 'block';
       btn.textContent = 'Send Enquiry';
@@ -251,14 +236,15 @@ document.getElementById('enquiry-form').addEventListener('submit', function(e) {
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">&copy; 2025 Urmston Physio Clinic. All rights reserved. 220 Higher Road, Urmston, Manchester, M41 9BH.</p>
+      <button type="button" class="footer-cookie-link" data-cookie-settings>Cookie settings</button>
     </div>
   </div>
 </footer>
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie notice">
-  <p class="cookie-text">We use cookies to provide essential site functionality and to embed our location map via Google Maps. By clicking Accept you consent to our use of cookies.</p>
+  <p class="cookie-text">With your consent, we use Google Analytics cookies to understand how our site is used and to measure bookings from our Google ads. Our location map comes from Google Maps, which sets its own cookies. Nothing is set unless you accept, and you can change your choice at any time with Cookie settings at the bottom of every page. <a href="/privacy-policy/">Privacy policy</a></p>
   <div class="cookie-actions">
     <button id="cookie-decline" class="cookie-btn cookie-decline">Decline</button>
-    <button id="cookie-accept" class="cookie-btn cookie-accept">Accept Cookies</button>
+    <button id="cookie-accept" class="cookie-btn cookie-accept">Accept</button>
   </div>
 </div>
 <script src="../js/main.js"></script>

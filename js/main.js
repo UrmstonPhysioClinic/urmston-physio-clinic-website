@@ -150,13 +150,4 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 
-// ── COOKIE BANNER ──
-(function() {
-  const KEY = 'upc_cookie_consent';
-  if (localStorage.getItem(KEY)) return;
-  const banner = document.getElementById('cookie-banner');
-  if (!banner) return;
-  setTimeout(() => banner.classList.add('visible'), 900);
-  document.getElementById('cookie-accept')?.addEventListener('click', () => { localStorage.setItem(KEY,'accepted'); banner.classList.remove('visible'); window.dispatchEvent(new Event('upc:cookie-accepted')); });
-  document.getElementById('cookie-decline')?.addEventListener('click', () => { localStorage.setItem(KEY,'declined'); banner.classList.remove('visible'); });
-})();
+// The cookie banner is handled in consent.js.

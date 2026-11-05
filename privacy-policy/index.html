@@ -26,25 +26,7 @@
     .policy-contact-box p { margin: 0; font-size: 0.9rem; color: var(--grey-mid); line-height: 1.9; }
     .policy-contact-box a { color: var(--purple); }
   </style>
-  <!-- Google tag (gtag.js) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    function initGA() {
-      if (window._gaInitialised) return;
-      window._gaInitialised = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DQG3MYNNQ5';
-      document.head.appendChild(s);
-      gtag('js', new Date());
-      gtag('config', 'G-DQG3MYNNQ5', {
-        linker: { domains: ['urmstonphysioclinic.com', 'eu.halaxy.com'] }
-      });
-    }
-    if (localStorage.getItem('upc_cookie_consent') === 'accepted') { initGA(); }
-    window.addEventListener('upc:cookie-accepted', initGA);
-  </script>
+  <script src="/js/consent.js" defer></script>
 </head>
 <body>
 <nav>
@@ -319,14 +301,15 @@
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">&copy; 2025 Urmston Physio Clinic. All rights reserved. 220 Higher Road, Urmston, Manchester, M41 9BH.</p>
+      <button type="button" class="footer-cookie-link" data-cookie-settings>Cookie settings</button>
     </div>
   </div>
 </footer>
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie notice">
-  <p class="cookie-text">We use cookies to provide essential site functionality and to embed our location map via Google Maps. By clicking Accept you consent to our use of cookies.</p>
+  <p class="cookie-text">With your consent, we use Google Analytics cookies to understand how our site is used and to measure bookings from our Google ads. Our location map comes from Google Maps, which sets its own cookies. Nothing is set unless you accept, and you can change your choice at any time with Cookie settings at the bottom of every page. <a href="/privacy-policy/">Privacy policy</a></p>
   <div class="cookie-actions">
     <button id="cookie-decline" class="cookie-btn cookie-decline">Decline</button>
-    <button id="cookie-accept" class="cookie-btn cookie-accept">Accept Cookies</button>
+    <button id="cookie-accept" class="cookie-btn cookie-accept">Accept</button>
   </div>
 </div>
 <script src="../js/main.js"></script>

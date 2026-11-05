@@ -558,7 +558,7 @@ footer { background: #131317; padding: 4rem 0 2rem; }
   transform: translateY(110%); transition: transform 0.4s ease;
 }
 .cookie-banner.visible { transform: translateY(0); }
-.cookie-text { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.6; max-width: 680px; }
+.cookie-text { font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.6; max-width: 680px; }
 .cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
 .cookie-btn {
   padding: 0.52rem 1.2rem; border-radius: var(--radius);
@@ -566,8 +566,18 @@ footer { background: #131317; padding: 4rem 0 2rem; }
 }
 .cookie-accept { background: var(--purple); color: var(--white); transition: background var(--ease); }
 .cookie-accept:hover { background: var(--purple-dark); }
-.cookie-decline { background: transparent; color: rgba(255,255,255,0.38); border: 1px solid rgba(255,255,255,0.12) !important; transition: border-color var(--ease), color var(--ease); }
-.cookie-decline:hover { border-color: rgba(255,255,255,0.3) !important; color: rgba(255,255,255,0.65); }
+.cookie-decline { background: var(--purple); color: var(--white); transition: background var(--ease); }
+.cookie-decline:hover { background: var(--purple-dark); }
+.cookie-text a { color: var(--white); text-decoration: underline; }
+.footer-cookie-link { background: none; border: none; padding: 0; font-family: var(--font); font-size: 0.71rem; color: rgba(255,255,255,0.45); text-decoration: underline; cursor: pointer; }
+.footer-cookie-link:hover { color: rgba(255,255,255,0.75); }
+
+/* Google Maps embeds wait for consent */
+.map-wrap { position: relative; }
+.map-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.9rem; padding: 1.5rem; text-align: center; background: var(--charcoal); color: rgba(255,255,255,0.75); font-size: 0.85rem; }
+.map-loaded .map-placeholder { display: none; }
+.map-load-btn { padding: 0.55rem 1.3rem; border-radius: var(--radius); border: none; background: var(--purple); color: var(--white); font-family: var(--font); font-weight: 600; font-size: 0.8rem; cursor: pointer; }
+.map-load-btn:hover { background: var(--purple-dark); }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
