@@ -86,6 +86,18 @@
   </url>
 
   <url>
+    <loc>https://www.urmstonphysioclinic.com/sports-injuries/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/areas-we-serve/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
     <loc>https://www.urmstonphysioclinic.com/privacy-policy/</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>

@@ -47,25 +47,25 @@
       font-family: var(--font-display); font-size: 3rem;
       font-weight: 700; color: var(--purple);
     }
-    .member-sidebar h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .member-sidebar h2 { font-size: 1.5rem; margin-bottom: 0.25rem; }
     .member-sidebar .team-role { margin-bottom: 1.25rem; }
     .member-quals { display: flex; flex-direction: column; gap: 0.5rem; }
     .qual-badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
       font-size: 0.73rem; font-weight: 500; letter-spacing: 0.06em;
       padding: 0.3rem 0.75rem; border-radius: 20px;
-      background: var(--purple-pale); color: var(--purple);
+      background: var(--purple-pale); color: var(--purple-dark);
       border: 1px solid rgba(123,79,166,0.15);
       width: fit-content;
     }
     .qual-badge::before { content: '✓'; }
-    .member-content h4 {
+    .member-content h3 {
       font-family: var(--font-body); font-size: 0.72rem;
       text-transform: uppercase; letter-spacing: 0.14em;
       color: var(--purple); font-weight: 600;
       margin: 2rem 0 0.75rem;
     }
-    .member-content h4:first-child { margin-top: 0; }
+    .member-content h3:first-child { margin-top: 0; }
     .member-content p { color: var(--grey-mid); line-height: 1.8; margin-bottom: 0.75rem; }
     .interests-card {
       background: var(--off-white);
@@ -76,6 +76,11 @@
       font-size: 0.88rem; color: var(--grey-mid);
       line-height: 1.7;
     }
+    .member-reg { margin-top: 1.5rem; }
+    .member-reg-logos { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 0.75rem; }
+    .member-reg-logos img { display: block; height: 82px; width: auto; }
+    .member-reg a { font-size: 0.78rem; color: var(--purple); text-decoration: underline; }
+    .team-reg-note { font-size: 0.8rem; color: var(--grey-mid); line-height: 1.7; max-width: 780px; padding-top: 2.5rem; border-top: 1px solid var(--grey-light); }
     @media (max-width: 900px) {
       .team-member { grid-template-columns: 1fr; gap: 2rem; }
       .member-sidebar { position: static; display: flex; flex-direction: column; align-items: flex-start; }
@@ -101,6 +106,7 @@
           <a href="/conditions/shoulder-pain/">Shoulder Pain</a>
           <a href="/conditions/hip-pain/">Hip Pain</a>
           <a href="/conditions/foot-ankle-achilles/">Foot, Ankle &amp; Achilles</a>
+          <a href="/sports-injuries/">Sports Injuries</a>
         </div>
       </li>
       <li><a href="/team/">Our Team</a></li>
@@ -110,9 +116,9 @@
       <li><a href="/contact/">Contact</a></li>
       <li><a href="https://eu.halaxy.com/book/urmston-physio-clinic/location/313854" target="_blank" rel="noopener" class="nav-cta">Book Now</a></li>
     </ul>
-    <div class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <button type="button" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
   <div class="mobile-menu" aria-hidden="true">
     <a href="/services/">Services</a>
@@ -126,6 +132,7 @@
         <a href="/conditions/shoulder-pain/">Shoulder Pain</a>
         <a href="/conditions/hip-pain/">Hip Pain</a>
         <a href="/conditions/foot-ankle-achilles/">Foot, Ankle &amp; Achilles</a>
+        <a href="/sports-injuries/">Sports Injuries</a>
       </div>
     </div>
     <a href="/team/">Our Team</a>
@@ -150,27 +157,32 @@
   <div class="container">
 
     <!-- Carl Healy -->
-    <div class="team-member reveal">
+    <div class="team-member reveal" id="carl-healy">
       <div class="member-sidebar">
         <div class="member-photo">
           <img src="../images/carl-healy.jpg" alt="Carl Healy" loading="lazy" />
         </div>
-        <h3>Carl Healy</h3>
+        <h2>Carl Healy</h2>
         <div class="team-role">Clinic Director</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">BSc Physiotherapy, Salford 2015</span>
+        </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH106684&amp;profession=PH&amp;backtosearchurl=https://www.hcpc-uk.org/check-the-register/register-results/&amp;backtosearchquery=Healy" target="_blank" rel="noopener">HCPC registration PH106684</a>
         </div>
       </div>
       <div class="member-content">
-        <h4>Clinical Background</h4>
+        <h3>Clinical Background</h3>
         <p>Carl is Clinic Director at Urmston Physio Clinic, managing the day-to-day running of the practice alongside his clinical caseload. He graduated from the University of Salford in 2015 and has since developed a strong reputation for thorough, effective musculoskeletal physiotherapy.</p>
-        <h4>Areas of Expertise</h4>
+        <h3>Areas of Expertise</h3>
         <p>His clinical work focuses on musculoskeletal and neuromuscular physiotherapy, with particular interest in the shoulder, hip, sacroiliac joint and lower back. He takes a movement-focused, evidence-informed approach, aiming to find the underlying drivers of a problem rather than simply addressing the surface symptoms.</p>
-        <h4>Clinical Philosophy</h4>
+        <h3>Clinical Philosophy</h3>
         <p>Carl's primary aim is always to identify the underlying drivers of dysfunction, not just manage symptoms, and to restore optimal function that lasts. He works collaboratively with patients, ensuring they understand their condition and are active participants in their recovery.</p>
-        <h4>Outside the Clinic</h4>
+        <h3>Outside the Clinic</h3>
         <div class="interests-card">Carl is a keen runner and cyclist who regularly hikes in the Lake District. His background also includes white-water kayaking, ballet and extensive martial arts training, all of which inform his understanding of movement and physical performance.</div>
       </div>
     </div>
@@ -181,22 +193,27 @@
         <div class="member-photo">
           <img src="../images/roxana-healy.jpg" alt="Roxanna Healy" loading="lazy" style="object-position: center 65%;" />
         </div>
-        <h3>Roxanna Healy</h3>
+        <h2>Roxanna Healy</h2>
         <div class="team-role">Senior Physiotherapist</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">Newcastle Polytechnic, 1987</span>
+        </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH37932&amp;profession=PH&amp;backtosearchurl=https://www.hcpc-uk.org/check-the-register/register-results/&amp;backtosearchquery=Healy" target="_blank" rel="noopener">HCPC registration PH37932</a>
         </div>
       </div>
       <div class="member-content">
-        <h4>Clinical Background</h4>
+        <h3>Clinical Background</h3>
         <p>Roxanna qualified from Newcastle Polytechnic in 1987, giving her nearly four decades of clinical experience. Her career spans two distinct disciplines: she began specialising in paediatric neurological and MSK physiotherapy, building deep expertise in complex neurological rehabilitation, before moving into musculoskeletal physiotherapy where she has worked as a clinical specialist for many years.</p>
-        <h4>Areas of Expertise</h4>
+        <h3>Areas of Expertise</h3>
         <p>She has developed extensive expertise in complex neurological rehabilitation and combines this with hands-on MSK practice to deliver care that is truly holistic and highly effective.</p>
-        <h4>Clinical Philosophy</h4>
+        <h3>Clinical Philosophy</h3>
         <p>Roxanna brings a holistic, functional approach to rehabilitation, drawing on her neurological background to support patients with diverse and often complex presentations.</p>
-        <h4>Outside the Clinic</h4>
+        <h3>Outside the Clinic</h3>
         <div class="interests-card">At weekends Roxanna enjoys walks along the Formby coast, where she relaxes and watches the local red squirrel population amid the sand dunes and pine forest.</div>
       </div>
     </div>
@@ -207,22 +224,27 @@
         <div class="member-photo">
           <img src="../images/diana-satalova.jpg" alt="Diana Satalova" loading="lazy" />
         </div>
-        <h3>Diana Satalova</h3>
+        <h2>Diana Satalova</h2>
         <div class="team-role">Biomechanics &amp; Movement</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">BSc Physiotherapy, Brighton 2011</span>
+        </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH100077&amp;profession=PH&amp;backtosearchurl=https://www.hcpc-uk.org/check-the-register/register-results/&amp;backtosearchquery=satalova" target="_blank" rel="noopener">HCPC registration PH100077</a>
         </div>
       </div>
       <div class="member-content">
-        <h4>Clinical Background</h4>
+        <h3>Clinical Background</h3>
         <p>Since graduating from the University of Brighton in 2011, Diana has continuously developed her knowledge and clinical skills, driven by a genuine passion for understanding how the human body moves, compensates, and heals.</p>
-        <h4>Areas of Expertise</h4>
+        <h3>Areas of Expertise</h3>
         <p>Diana has built a clinical focus on body movement, biomechanics, neuro-kinetic therapy and breathing therapy. She takes a full-body approach to assessment and treatment, working on the basis that the source of pain is often found somewhere other than where the symptoms are felt. This perspective has proved particularly effective for patients who have struggled to find answers with other practitioners.</p>
-        <h4>Clinical Philosophy</h4>
+        <h3>Clinical Philosophy</h3>
         <p>Diana is committed to ongoing learning and regularly attends courses and seminars to develop her clinical skills further. She finds great satisfaction in seeing the positive impact that a well-targeted, thorough assessment and treatment plan can have on people's lives.</p>
-        <h4>Outside the Clinic</h4>
+        <h3>Outside the Clinic</h3>
         <div class="interests-card">Outside the clinic she studies languages, goes hiking, and attends health education events, a reflection of her genuine love of learning and continuous development.</div>
       </div>
     </div>
@@ -233,26 +255,33 @@
         <div class="member-photo">
           <img src="../images/steve-sharples.jpg" alt="Steve Sharples" loading="lazy" />
         </div>
-        <h3>Steve Sharples</h3>
+        <h2>Steve Sharples</h2>
         <div class="team-role">MSK &amp; Orthopaedic Physiotherapist</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">BSc Sports Science, 1987</span>
           <span class="qual-badge">BSc Physiotherapy, 1992</span>
         </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH44642&amp;profession=PH&amp;backtosearchurl=https://www.hcpc-uk.org/check-the-register/register-results/&amp;backtosearchquery=sharples" target="_blank" rel="noopener">HCPC registration PH44642</a>
+        </div>
       </div>
       <div class="member-content">
-        <h4>Clinical Background</h4>
+        <h3>Clinical Background</h3>
         <p>Steve brings over 30 years of clinical experience to Urmston Physio Clinic. He completed a BSc in Sports Science in 1987 before qualifying as a physiotherapist in 1992, a dual academic background that gives him a particularly strong grounding in movement science and physical performance alongside his clinical training.</p>
-        <h4>Areas of Expertise</h4>
+        <h3>Areas of Expertise</h3>
         <p>Since qualifying he has worked across NHS and private settings, developing broad and deep expertise in musculoskeletal and orthopaedic physiotherapy. His clinical experience spans A&amp;E, hydrotherapy, rheumatology and shoulder clinics, and he has held senior roles including Extended Scope Practitioner in Musculoskeletal and Rheumatology and Orthopaedic Physiotherapy Specialist.</p>
-        <h4>Clinical Philosophy</h4>
+        <h3>Clinical Philosophy</h3>
         <p>Steve is known for a measured, thorough, holistic approach to assessment and a genuine commitment to good patient outcomes.</p>
-        <h4>Outside the Clinic</h4>
+        <h3>Outside the Clinic</h3>
         <div class="interests-card">Outside the clinic, Steve is a keen runner with an extensive background in mountaineering and hiking. He also has a long history in martial arts, including Judo and Jujitsu.</div>
       </div>
     </div>
+
+    <p class="team-reg-note">All our physiotherapists are registered with the Health and Care Professions Council (HCPC) and are members of the Chartered Society of Physiotherapy (CSP). The CSP is the professional, educational and trade union body for the UK's chartered physiotherapists, physiotherapy students and support workers. You can check any physiotherapist's registration on the <a href="https://www.hcpc-uk.org/check-the-register/" target="_blank" rel="noopener" style="color:var(--purple-dark);text-decoration:underline;">HCPC register</a>.</p>
 
   </div>
 </section>
@@ -273,14 +302,10 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="../images/logo.png" alt="Urmston Physio Clinic" class="footer-logo-img" />
-        <p>Expert musculoskeletal physiotherapy in Urmston, Manchester. HCPC registered. CSP members.</p>
-        <div class="footer-badges">
-          <span class="footer-badge">HCPC Registered</span>
-          <span class="footer-badge">CSP Member</span>
-        </div>
+        <p>Expert musculoskeletal physiotherapy in Urmston, Manchester. All our physiotherapists are HCPC registered and CSP members.</p>
       </div>
       <div class="footer-col">
-        <h4>Conditions</h4>
+        <h2>Conditions</h2>
         <ul>
           <li><a href="/conditions/back-pain/">Back Pain</a></li>
           <li><a href="/conditions/neck-pain/">Neck Pain</a></li>
@@ -289,16 +314,18 @@
           <li><a href="/conditions/shoulder-pain/">Shoulder Pain</a></li>
           <li><a href="/conditions/hip-pain/">Hip Pain</a></li>
           <li><a href="/conditions/foot-ankle-achilles/">Foot, Ankle &amp; Achilles</a></li>
+        <li><a href="/sports-injuries/">Sports Injuries</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Clinic</h4>
+        <h2>Clinic</h2>
         <ul>
           <li><a href="/services/">Services</a></li>
           <li><a href="/team/">Our Team</a></li>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/pricing/">Pricing</a></li>
           <li><a href="/faqs/">FAQs</a></li>
+          <li><a href="/areas-we-serve/">Areas We Serve</a></li>
           <li><a href="/cancellation-policy/">Cancellation Policy</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/contact/">Contact</a></li>
@@ -306,7 +333,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact Us</h4>
+        <h2>Contact Us</h2>
         <address>
           <p>220 Higher Road<br>Urmston, Manchester<br>M41 9BH</p>
           <a href="tel:01617484100">0161 748 4100</a>
