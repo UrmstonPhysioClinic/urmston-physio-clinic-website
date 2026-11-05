@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url('../fonts/plus-jakarta-sans-300.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/plus-jakarta-sans-400.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('../fonts/plus-jakarta-sans-500.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('../fonts/plus-jakarta-sans-600.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('../fonts/plus-jakarta-sans-700.woff2') format('woff2'); }
 
 :root {
   --purple:      #994de6;
@@ -195,7 +199,7 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 }
 .hero-video-wrap {
   position: absolute; inset: 0; z-index: 0;
-  background: url('../images/hero_full-bleed.png') center/cover no-repeat;
+  background: url('../images/hero.jpg') center/cover no-repeat;
 }
 .hero-video-wrap video {
   position: absolute; inset: 0; width: 100%; height: 100%;
@@ -318,6 +322,14 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 .insurer-card img { max-height: 38px; max-width: 120px; object-fit: contain; filter: grayscale(1) opacity(0.55); transition: filter var(--ease); }
 .insurer-card:hover img { filter: grayscale(0) opacity(1); }
 .insurer-card span { font-size: 0.72rem; color: var(--grey-mid); font-weight: 500; text-align: center; }
+.insurer-grid-4 { grid-template-columns: repeat(4,1fr); }
+.insurer-grid > .insurer-card { min-width: 0; }
+.insurer-card img { max-width: 100%; width: 120px; height: 38px; }
+.insurer-group-title { font-size: 1.05rem; margin: 2rem 0 0.4rem; }
+.insurer-group-title:first-child, .section-header + .insurer-group-title { margin-top: 0; }
+.insurer-group-note { font-size: 0.85rem; color: var(--grey-mid); margin-bottom: 1rem; max-width: 640px; }
+.footer-hours { margin-top: 0.5rem; }
+.footer-hours strong { color: rgba(255,255,255,0.45); font-weight: 600; }
 .info-box {
   padding: 1.5rem 2rem; border-radius: 4px;
   background: var(--purple-pale); border: 1px solid rgba(153,77,230,0.15);
@@ -558,7 +570,7 @@ footer { background: #131317; padding: 4rem 0 2rem; }
   transform: translateY(110%); transition: transform 0.4s ease;
 }
 .cookie-banner.visible { transform: translateY(0); }
-.cookie-text { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.6; max-width: 680px; }
+.cookie-text { font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.6; max-width: 680px; }
 .cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
 .cookie-btn {
   padding: 0.52rem 1.2rem; border-radius: var(--radius);
@@ -566,8 +578,18 @@ footer { background: #131317; padding: 4rem 0 2rem; }
 }
 .cookie-accept { background: var(--purple); color: var(--white); transition: background var(--ease); }
 .cookie-accept:hover { background: var(--purple-dark); }
-.cookie-decline { background: transparent; color: rgba(255,255,255,0.38); border: 1px solid rgba(255,255,255,0.12) !important; transition: border-color var(--ease), color var(--ease); }
-.cookie-decline:hover { border-color: rgba(255,255,255,0.3) !important; color: rgba(255,255,255,0.65); }
+.cookie-decline { background: var(--purple); color: var(--white); transition: background var(--ease); }
+.cookie-decline:hover { background: var(--purple-dark); }
+.cookie-text a { color: var(--white); text-decoration: underline; }
+.footer-cookie-link { background: none; border: none; padding: 0; font-family: var(--font); font-size: 0.71rem; color: rgba(255,255,255,0.45); text-decoration: underline; cursor: pointer; }
+.footer-cookie-link:hover { color: rgba(255,255,255,0.75); }
+
+/* Google Maps embeds wait for consent */
+.map-wrap { position: relative; }
+.map-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.9rem; padding: 1.5rem; text-align: center; background: var(--charcoal); color: rgba(255,255,255,0.75); font-size: 0.85rem; }
+.map-loaded .map-placeholder { display: none; }
+.map-load-btn { padding: 0.55rem 1.3rem; border-radius: var(--radius); border: none; background: var(--purple); color: var(--white); font-family: var(--font); font-weight: 600; font-size: 0.8rem; cursor: pointer; }
+.map-load-btn:hover { background: var(--purple-dark); }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
