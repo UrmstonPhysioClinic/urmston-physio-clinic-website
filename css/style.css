@@ -346,7 +346,7 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 }
 .team-card:hover { transform: translateY(-4px); }
 .team-card-img-wrap {
-  width: 180px; height: 180px; border-radius: 50%; overflow: hidden;
+  width: 100%; max-width: 180px; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
   margin: 0 auto 1.5rem;
   border: 3px solid rgba(153,77,230,0.3);
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
@@ -617,7 +617,7 @@ footer { background: #131317; padding: 4rem 0 2rem; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .services-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: repeat(2,1fr); }
+  .team-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem 1rem; }
   .reviews-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .insurer-grid { grid-template-columns: 1fr 1fr; }
@@ -645,3 +645,9 @@ footer { background: #131317; padding: 4rem 0 2rem; }
 .page-author { font-size: 0.8rem; color: var(--grey-mid); margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(0,0,0,0.08); }
 .page-author a { color: var(--purple-dark); text-decoration: underline; }
 .team-member[id] { scroll-margin-top: 100px; }
+
+/* Very narrow phones (320px): keep long headings and role labels inside the screen */
+@media (max-width: 360px) {
+  h1 { font-size: 2rem; }
+  .team-card .team-role { letter-spacing: 0.05em; }
+}
