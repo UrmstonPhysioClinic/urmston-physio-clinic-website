@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url('../fonts/plus-jakarta-sans-300.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/plus-jakarta-sans-400.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('../fonts/plus-jakarta-sans-500.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('../fonts/plus-jakarta-sans-600.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('../fonts/plus-jakarta-sans-700.woff2') format('woff2'); }
 
 :root {
   --purple:      #994de6;
@@ -195,7 +199,7 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 }
 .hero-video-wrap {
   position: absolute; inset: 0; z-index: 0;
-  background: url('../images/hero_full-bleed.png') center/cover no-repeat;
+  background: url('../images/hero.jpg') center/cover no-repeat;
 }
 .hero-video-wrap video {
   position: absolute; inset: 0; width: 100%; height: 100%;
