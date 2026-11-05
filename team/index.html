@@ -76,6 +76,11 @@
       font-size: 0.88rem; color: var(--grey-mid);
       line-height: 1.7;
     }
+    .member-reg { margin-top: 1.5rem; }
+    .member-reg-logos { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 0.75rem; }
+    .member-reg-logos img { display: block; height: 82px; width: auto; }
+    .member-reg a { font-size: 0.78rem; color: var(--purple); text-decoration: underline; }
+    .team-reg-note { font-size: 0.8rem; color: var(--grey-mid); line-height: 1.7; max-width: 780px; padding-top: 2.5rem; border-top: 1px solid var(--grey-light); }
     @media (max-width: 900px) {
       .team-member { grid-template-columns: 1fr; gap: 2rem; }
       .member-sidebar { position: static; display: flex; flex-direction: column; align-items: flex-start; }
@@ -160,9 +165,14 @@
         <h3>Carl Healy</h3>
         <div class="team-role">Clinic Director</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">BSc Physiotherapy, Salford 2015</span>
+        </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH106684&amp;profession=PH" target="_blank" rel="noopener">HCPC registration PH106684</a>
         </div>
       </div>
       <div class="member-content">
@@ -186,9 +196,14 @@
         <h3>Roxanna Healy</h3>
         <div class="team-role">Senior Physiotherapist</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">Newcastle Polytechnic, 1987</span>
+        </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH37932&amp;profession=PH" target="_blank" rel="noopener">HCPC registration PH37932</a>
         </div>
       </div>
       <div class="member-content">
@@ -212,9 +227,14 @@
         <h3>Diana Satalova</h3>
         <div class="team-role">Biomechanics &amp; Movement</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">BSc Physiotherapy, Brighton 2011</span>
+        </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH100077&amp;profession=PH" target="_blank" rel="noopener">HCPC registration PH100077</a>
         </div>
       </div>
       <div class="member-content">
@@ -238,10 +258,15 @@
         <h3>Steve Sharples</h3>
         <div class="team-role">MSK &amp; Orthopaedic Physiotherapist</div>
         <div class="member-quals">
-          <span class="qual-badge">HCPC Registered</span>
-          <span class="qual-badge">CSP Member</span>
           <span class="qual-badge">BSc Sports Science, 1987</span>
           <span class="qual-badge">BSc Physiotherapy, 1992</span>
+        </div>
+        <div class="member-reg">
+          <div class="member-reg-logos">
+            <img src="/images/hcpc-registered.jpg" alt="HCPC registered" width="80" height="82" loading="lazy" />
+            <img src="/images/csp-member.svg" alt="Member of the Chartered Society of Physiotherapy" width="48" height="82" loading="lazy" />
+          </div>
+          <a href="https://www.hcpc-uk.org/check-the-register/professional-registration-detail/?query=PH44642&amp;profession=PH" target="_blank" rel="noopener">HCPC registration PH44642</a>
         </div>
       </div>
       <div class="member-content">
@@ -255,6 +280,8 @@
         <div class="interests-card">Outside the clinic, Steve is a keen runner with an extensive background in mountaineering and hiking. He also has a long history in martial arts, including Judo and Jujitsu.</div>
       </div>
     </div>
+
+    <p class="team-reg-note">All our physiotherapists are registered with the Health and Care Professions Council (HCPC) and are members of the Chartered Society of Physiotherapy (CSP). The CSP is the professional, educational and trade union body for the UK's chartered physiotherapists, physiotherapy students and support workers. You can check any physiotherapist's registration on the <a href="https://www.hcpc-uk.org/check-the-register/" target="_blank" rel="noopener" style="color:var(--purple);">HCPC register</a>.</p>
 
   </div>
 </section>
@@ -275,7 +302,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="../images/logo.png" alt="Urmston Physio Clinic" class="footer-logo-img" />
-        <p>Expert musculoskeletal physiotherapy in Urmston, Manchester. HCPC registered. CSP members.</p>
+        <p>Expert musculoskeletal physiotherapy in Urmston, Manchester. All our physiotherapists are HCPC registered and CSP members.</p>
         <div class="footer-badges">
           <span class="footer-badge">HCPC Registered</span>
           <span class="footer-badge">CSP Member</span>
