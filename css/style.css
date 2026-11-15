@@ -282,7 +282,7 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(255,255,255,0.08); }
 .service-card {
   background: var(--charcoal); padding: 2.25rem 2rem;
-  transition: background var(--ease); cursor: default; position: relative;
+  transition: background var(--ease); cursor: pointer; position: relative;
 }
 .service-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -675,3 +675,6 @@ footer { background: #131317; padding: 4rem 0 2rem; }
 .msk-intro p { color: var(--grey-mid); margin-bottom: 1rem; }
 .cond-card { display: flex; flex-direction: column; }
 .cond-card .service-card-link { margin-top: auto; }
+/* Homepage condition cards: the whole card is clickable via its link */
+.service-card-link::before { content: ''; position: absolute; inset: 0; z-index: 1; }
+.service-card-link:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
