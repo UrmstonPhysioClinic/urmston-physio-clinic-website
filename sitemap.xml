@@ -8,12 +8,6 @@
   </url>
 
   <url>
-    <loc>https://www.urmstonphysioclinic.com/services/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
     <loc>https://www.urmstonphysioclinic.com/team/</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
@@ -43,6 +37,11 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/conditions/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   <url>
     <loc>https://www.urmstonphysioclinic.com/conditions/back-pain/</loc>
     <priority>0.8</priority>

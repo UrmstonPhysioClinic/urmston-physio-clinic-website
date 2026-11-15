@@ -282,7 +282,7 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(255,255,255,0.08); }
 .service-card {
   background: var(--charcoal); padding: 2.25rem 2rem;
-  transition: background var(--ease); cursor: default; position: relative;
+  transition: background var(--ease); cursor: pointer; position: relative;
 }
 .service-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -371,7 +371,7 @@ nav.scrolled .hamburger span, nav.nav-light .hamburger span { background: var(--
 .team-role { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--purple-dark); margin-bottom: 0.85rem; display: block; }
 .team-bio { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
 .team-quals { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
-.qual { font-size: 0.7rem; font-weight: 600; padding: 0.22rem 0.65rem; border-radius: 20px; background: var(--purple-pale); color: var(--purple); border: 1px solid rgba(153,77,230,0.15); }
+.qual { font-size: 0.7rem; font-weight: 600; padding: 0.22rem 0.65rem; border-radius: 20px; background: var(--purple-pale); color: var(--purple-dark); border: 1px solid rgba(153,77,230,0.15); }
 .team-interests { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--grey-light); font-size: 0.78rem; color: var(--grey-mid); }
 
 /* ── REVIEWS ── */
@@ -655,3 +655,26 @@ footer { background: #131317; padding: 4rem 0 2rem; }
   h1 { font-size: 2rem; }
   .team-card .team-role { letter-spacing: 0.05em; }
 }
+
+/* Areas page: one card per area */
+.area-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.area-card { background: var(--white); border: 1px solid var(--grey-light); border-radius: 4px; padding: 1.75rem; }
+.area-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+.area-card p { color: var(--grey-mid); font-size: 0.9rem; margin-bottom: 0.9rem; }
+.area-facts { list-style: none; padding: 0; margin: 0; font-size: 0.86rem; color: var(--grey-mid); }
+.area-facts li { padding: 0.45rem 0; border-top: 1px solid var(--grey-light); }
+.area-facts strong { color: var(--charcoal); font-weight: 600; }
+@media (max-width: 768px) { .area-grid { grid-template-columns: 1fr; } }
+
+/* Conditions hub: whole card is the link */
+.cond-card { display: block; transition: border-color var(--ease), transform var(--ease); }
+.cond-card:hover { border-color: var(--purple); transform: translateY(-2px); }
+.cond-card h3 { color: var(--charcoal); }
+.cond-card .service-card-link { font-size: 0.82rem; font-weight: 600; }
+@media (min-width: 1025px) { .cond-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.msk-intro p { color: var(--grey-mid); margin-bottom: 1rem; }
+.cond-card { display: flex; flex-direction: column; }
+.cond-card .service-card-link { margin-top: auto; }
+/* Homepage condition cards: the whole card is clickable via its link */
+.service-card-link::before { content: ''; position: absolute; inset: 0; z-index: 1; }
+.service-card-link:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
