@@ -700,7 +700,6 @@ footer { background: #131317; padding: 4rem 0 2rem; }
 .fee-list strong { color: var(--charcoal); font-size: 1rem; white-space: nowrap; }
 .placeholder { background: #fff1a8; color: #4d3d00; font-weight: 600; padding: 0 0.3em; border-radius: 2px; }
 @media (max-width: 768px) { .choice-grid { grid-template-columns: 1fr; } }
-#rehab-after-surgery { scroll-margin-top: 90px; }
 /* Phones: less space above the page title so the Book button shows without scrolling */
 @media (max-width: 768px) {
   .condition-hero { padding: 6.75rem 0 3.5rem; }

@@ -114,6 +114,11 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/rehab-after-surgery/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
   <url>
     <loc>https://www.urmstonphysioclinic.com/areas-we-serve/</loc>
