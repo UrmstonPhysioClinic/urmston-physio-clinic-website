@@ -687,10 +687,10 @@ footer { background: #131317; padding: 4rem 0 2rem; }
 .choice-box h3 { font-size: 1.05rem; margin-bottom: 1rem; }
 .choice-box .check-list { margin-bottom: 0 !important; font-size: 0.9rem; }
 .choice-no .check-list li::before { background: var(--charcoal); }
-.safety-box { border: 1px solid #e3b4b4; border-left: 4px solid #b42318; background: #fdf4f3; border-radius: 4px; padding: 1.5rem 1.75rem; }
-.safety-box h2 { font-size: 1.15rem; margin-bottom: 0.75rem; color: #7a1a12; }
-.safety-box ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.55rem; font-size: 0.9rem; color: var(--text); line-height: 1.65; }
-.safety-box strong { color: #7a1a12; }
+.safety-box { border: 1px solid rgba(153,77,230,0.18); border-left: 3px solid var(--purple-dark); background: var(--white); border-radius: 4px; padding: 1.4rem 1.75rem; }
+.safety-box h2 { font-size: 1rem; margin-bottom: 0.7rem; color: var(--charcoal); }
+.safety-box ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; font-size: 0.88rem; color: var(--grey-mid); line-height: 1.65; }
+.safety-box strong { color: var(--charcoal); }
 .steps-list { margin: 0 0 1rem; padding-left: 1.2rem; display: grid; gap: 0.6rem; color: var(--grey-mid); font-size: 0.92rem; line-height: 1.65; }
 .steps-list li::marker { color: var(--purple-dark); font-weight: 700; }
 .fee-heading { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-dark); margin-bottom: 0.75rem; }
