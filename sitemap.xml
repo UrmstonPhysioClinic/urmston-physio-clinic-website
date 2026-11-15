@@ -89,6 +89,31 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/running-injuries/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/sports-massage/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/dry-needling-acupuncture/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/conditions/vertigo/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.urmstonphysioclinic.com/neuro-physio/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
   <url>
     <loc>https://www.urmstonphysioclinic.com/areas-we-serve/</loc>

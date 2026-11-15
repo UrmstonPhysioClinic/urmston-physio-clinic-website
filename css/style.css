@@ -678,3 +678,32 @@ footer { background: #131317; padding: 4rem 0 2rem; }
 /* Homepage condition cards: the whole card is clickable via its link */
 .service-card-link::before { content: ''; position: absolute; inset: 0; z-index: 1; }
 .service-card-link:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
+
+/* ── New service pages ── */
+.section-tight { padding-top: 3rem; padding-bottom: 3rem; }
+.choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.choice-box { background: var(--white); border: 1px solid var(--grey-light); border-top: 3px solid var(--purple); border-radius: 4px; padding: 1.75rem; }
+.choice-box.choice-no { border-top-color: var(--charcoal); }
+.choice-box h3 { font-size: 1.05rem; margin-bottom: 1rem; }
+.choice-box .check-list { margin-bottom: 0 !important; font-size: 0.9rem; }
+.choice-no .check-list li::before { background: var(--charcoal); }
+.safety-box { border: 1px solid #e3b4b4; border-left: 4px solid #b42318; background: #fdf4f3; border-radius: 4px; padding: 1.5rem 1.75rem; }
+.safety-box h2 { font-size: 1.15rem; margin-bottom: 0.75rem; color: #7a1a12; }
+.safety-box ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.55rem; font-size: 0.9rem; color: var(--text); line-height: 1.65; }
+.safety-box strong { color: #7a1a12; }
+.steps-list { margin: 0 0 1rem; padding-left: 1.2rem; display: grid; gap: 0.6rem; color: var(--grey-mid); font-size: 0.92rem; line-height: 1.65; }
+.steps-list li::marker { color: var(--purple-dark); font-weight: 700; }
+.fee-heading { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-dark); margin-bottom: 0.75rem; }
+.fee-list { list-style: none; margin: 0; padding: 0; }
+.fee-list li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--grey-light); font-size: 0.85rem; color: var(--grey-mid); }
+.fee-list li:last-child { border-bottom: none; }
+.fee-list strong { color: var(--charcoal); font-size: 1rem; white-space: nowrap; }
+.placeholder { background: #fff1a8; color: #4d3d00; font-weight: 600; padding: 0 0.3em; border-radius: 2px; }
+@media (max-width: 768px) { .choice-grid { grid-template-columns: 1fr; } }
+#rehab-after-surgery { scroll-margin-top: 90px; }
+/* Phones: less space above the page title so the Book button shows without scrolling */
+@media (max-width: 768px) {
+  .condition-hero { padding: 6.75rem 0 3.5rem; }
+  .condition-hero-content .divider { margin: 1rem 0; }
+  .condition-hero-content p { margin-bottom: 1.5rem; }
+}

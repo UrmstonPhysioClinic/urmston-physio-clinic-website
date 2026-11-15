@@ -83,20 +83,21 @@ if (hamburger && mobileMenu) {
   }));
 }
 
-// ── MOBILE CONDITIONS SUBMENU ──
-const mobileSubToggle = document.querySelector('.mobile-submenu-toggle');
-const mobileSubItems  = document.querySelector('.mobile-submenu-items');
-if (mobileSubToggle && mobileSubItems) {
-  mobileSubToggle.addEventListener('click', e => {
+// ── MOBILE SUBMENUS ──
+document.querySelectorAll('.mobile-submenu').forEach(sub => {
+  const toggle = sub.querySelector('.mobile-submenu-toggle');
+  const items  = sub.querySelector('.mobile-submenu-items');
+  if (!toggle || !items) return;
+  toggle.addEventListener('click', e => {
     e.stopPropagation();
-    const open = mobileSubItems.classList.toggle('open');
-    mobileSubToggle.setAttribute('aria-expanded', open);
+    const open = items.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
   });
-  mobileSubItems.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobileSubItems.classList.remove('open');
-    mobileSubToggle.setAttribute('aria-expanded', 'false');
+  items.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    items.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
   }));
-}
+});
 
 // ── CONDITIONS DROPDOWN ──
 document.querySelectorAll('.nav-dropdown').forEach(dd => {
